@@ -1,0 +1,145 @@
+@mixin main-width() {
+  max-width: 980px;
+  max-width: #{(980/16)}rem;;
+}
+
+$f-yahei:"\5FAE\8F6F\96C5\9ED1", Helvetica,Microsoft YaHei;
+$f-heiti:SimHei,Helvetica,Arial,Verdana,sans-serif;
+$f-simsun:SimSun,Helvetica,Arial,Verdana,sans-serif;
+$f-arial:Arial,Verdana,Helvetica,sans-serif;
+$f-s:16px;
+$f:16;
+@function rem($s:0){                       //函数：设计rem值
+  @return #{($s/$f)}rem;
+}
+@mixin height-set($height:auto){
+  height: $height;
+  overflow: hidden;
+}
+@mixin font($f,$s,$h,$c:#000){
+  font:{
+    family: #{$f};
+    size: rem($s);
+  }
+  line:{
+    height: rem($h);
+  }
+
+  color: $c;
+}
+@mixin ruler($s,$n){
+  #{$s}:rem($n);
+}
+@mixin afont($c:#000){
+  a{
+    text:{
+      decoration: none;
+    }
+    color: $c;
+  }
+
+}
+@mixin a-x(){
+  a{
+    &:hover,&:active{
+      text:{
+        decoration: underline;
+      }
+    }
+  }
+}
+@mixin margin($t:0,$r:0,$b:0,$l:0){
+  margin: #{$t}px #{$r}px #{$b}px #{$l}px;
+  margin: rem($t) rem($r) rem($b) rem($l);
+}
+@mixin padding($t:0,$r:0,$b:0,$l:0){
+  padding: #{$t}px #{$r}px #{$b}px #{$l}px;
+  padding: rem($t) rem($r) rem($b) rem($l);
+}
+@mixin border($n,$s,$c,$f){
+  border#{$f}:#{$n}px $s $c;
+  border#{$f}:rem($n) $s $c;
+}
+@mixin haiwai_nav(){
+  @media (max-width: 768px) {
+    .haiwai_nav,.public_header2014{
+      height: auto;
+      overflow: visible;
+      .haiwai_c,.public_headernav2014{
+        overflow: visible;
+        a{
+          padding:0 rem(5);
+        }
+      }
+    }
+  }
+  @media (min-width: 769px) {
+    .haiwai_nav,.public_header2014{
+      height: rem(40);
+      overflow: hidden;
+      text-align: center;
+      .haiwai_c,.public_headernav2014{
+        overflow: visible;
+        a{
+          padding:0 rem(8);
+        }
+      }
+    }
+  }
+  .haiwai_nav,.public_header2014{
+    width: 100%;
+
+
+    background: url("http://www.haiwainet.cn/img/LOCAL/2013/06/112073/images/nav01.jpg") repeat-x;
+
+    .haiwai_c,.public_headernav2014{
+      @include height-set();
+      max-width: 980px;
+      max-width: rem(980);
+      margin: 0 auto;
+      a{
+        @include font($f-simsun,12,40,#434343);
+        color: #434343;
+        text-decoration: none;
+        display: inline-block;
+      }
+      span{
+        @include font($f-simsun,12,40,#0096e0);
+        @include afont(#0096e0);
+        float: left;
+        a{
+          padding: 0 5px;
+          padding: 0 rem(5);
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+@mixin haiwai_footer(){
+  .btm,.haiwai_footer{
+    width: 100%;
+    @include height-set();
+    div{
+      @include height-set();
+      max-width: 980px;
+      max-width: rem(980);
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-top: rem(10);
+      p{
+        @include height-set();
+        @include font($f-simsun,12,24,#666);
+        text-align: center;
+        @include afont(#666);
+      }
+    }
+  }
+}
+@mixin pre($name,$v){
+  -webkit-#{$name}:$v;
+  -moz-#{$name}:$v;
+  -o-#{$name}:$v;
+  -ms-#{$name}:$v;
+  #{$name}:$v;
+}

@@ -1,0 +1,769 @@
+@import "bangong";
+.main{
+  @include height-set();
+  margin-bottom: rem(51);
+  div.header{
+    height: rem(45);
+    overflow:hidden;
+    @include font($f-yahei,12,45,#fff);
+    padding-left: rem(71);
+    background:#e6511c url("../images/logo.png") no-repeat rem(10) center;
+    background-size:rem(48) rem(23);
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-box;
+    display:-o-box;
+    display:box;
+    a.r{
+      height: rem(45);
+      overflow: hidden;
+      display: inline-block;
+      padding-right: rem(15);
+      margin-right: rem(5);
+      margin-left: rem(4);
+      background: url("../images/d.png") no-repeat right center;
+      background-size: rem(10) rem(6);
+      text-decoration: none;
+      color: #fff;
+    }
+    a.c{
+      -webkit-box-flex:1;
+      -moz-box-flex:1;
+      -ms-box-flex:1;
+      -o-box-flex:1;
+      box-flex:1;
+      display: block;
+      height: rem(30);
+      background: #fff;
+      border-radius: rem(7);
+      @include font($f-yahei,14,30,#bdbdbd);
+      text-indent: rem(8);
+      background:#fff url("../images/s.png") no-repeat calc(100% - 6px) center;
+      background-size: rem(16) rem(15);
+      text-decoration: none;
+      margin-top: rem(7);
+    }
+  }
+  div.nav{
+    width: 100%;
+    height: rem(20);
+    padding: rem(5) 0;
+    background: #e6511c;
+
+    @include font($f-yahei,14,20,#fff);
+    ul{
+      display:-webkit-box;
+      display:-moz-box;
+      display:-ms-box;
+      display:-o-box;
+      display:box;
+      li{
+        height: rem(20);
+        -webkit-box-flex:1;
+        -moz-box-flex:1;
+        -ms-box-flex:1;
+        -o-box-flex:1;
+        box-flex:1;
+        display: block;
+        text-align: center;
+        position: relative;
+        a{
+          text-decoration: none;
+          text-align: center;
+          color: #fff;
+        }
+        dl{
+          width: 100%;
+          height: 0;
+          overflow: hidden;
+          position: absolute;
+          background: #e6511c;
+          left: 0;
+          top: rem(20);
+          dt,dd{
+            height: rem(20);
+            overflow: hidden;
+            text-align: center;
+          }
+          -webkit-transition:.4s all ease;
+          -moz-transition:.4s all ease;
+          -ms-transition:.4s all ease;
+          -o-transition:.4s all ease;
+          transition:.4s all ease;
+
+        }
+        &:hover,&:active{
+          dl{
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  div.focus{
+    height: rem(100);
+    overflow: hidden;
+    position: relative;
+    ul.c{
+      @include height-set();
+      width: 100%;
+      height: rem(100);
+      li{
+        height: rem(100);
+        overflow: hidden;
+        float: left;
+        position: relative;
+        a{
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    div.d{
+      position: absolute;
+      height: rem(8);
+      overflow: hidden;
+      width: 100%;
+      left: 0;
+      bottom: rem(8);
+      z-index: 999;
+      text-align: center;
+      ul.d{
+        li{
+          width: rem(4);
+          height: rem(4);
+          overflow: hidden;
+          display: inline-block;
+          border-radius: 50%;
+          border: rem(2) solid #444444;
+          vertical-align: top;
+          margin:0 rem(4);
+          &.active{
+            background: #444444;
+          }
+        }
+      }
+    }
+
+  }
+  div.con{
+    @include height-set();
+    margin-bottom: rem(51);
+    ul.c{
+      height: rem(320);
+      overflow: hidden;
+      display:-webkit-box;
+      display:-moz-box;
+      display:-ms-box;
+      display:-o-box;
+      display:box;
+      -webkit-box-orient:vertical;
+      -moz-box-orient:vertical;
+      -ms-box-orient:vertical;
+      -o-box-orient:vertical;
+      box-orient:vertical;
+      li{
+        width: 100%;
+        overflow: hidden;
+        -webkit-box-flex:1;
+        -moz-box-flex:1;
+        -ms-box-flex:1;
+        -o-box-flex:1;
+        box-flex:1;
+        display:-webkit-box;
+        display:-moz-box;
+        display:-ms-box;
+        display:-o-box;
+        display:box;
+        -webkit-box-orient:horizontal;
+        -moz-box-orient:horizontal;
+        -ms-box-orient:horizontal;
+        -o-box-orient:horizontal;
+        box-orient:horizontal;
+        border-bottom: rem(1) solid #bbbbbb;
+        &:last-child{
+          border-bottom: 0;
+        }
+        div.x{
+          @include height-set();
+          -webkit-box-flex:1;
+          -moz-box-flex:1;
+          -ms-box-flex:1;
+          -o-box-flex:1;
+          box-flex:1;
+          border-right: rem(1) solid #bbbbbb;
+          text-align: center;
+          &:last-child{
+            border-right: 0;
+          }
+          a{
+            width: rem(100);
+            display: inline-block;
+            overflow: hidden;
+            @include font($f-yahei,12,160,#7f7f7f);
+            text-decoration: none;
+          }
+        }
+        &:nth-child(1){
+          div:nth-child(1){
+            background: url("../images/c_03.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+           }
+          div:nth-child(2){
+            background: url("../images/c_05.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+          }
+          div:nth-child(3){
+            background: url("../images/c_07.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+          }
+         }
+        &:nth-child(2){
+          div:nth-child(1){
+            background: url("../images/c_09.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+          }
+          div:nth-child(2){
+            background: url("../images/c_11.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+          }
+          div:nth-child(3){
+            background: url("../images/c_13.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+          }
+        }
+        &:nth-child(3){
+          div:nth-child(1){
+            background: url("../images/c_26.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+          }
+          div:nth-child(2){
+            background: url("../images/c_24.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+          }
+          div:nth-child(3){
+            background: url("../images/c_15.png") no-repeat center rem(20);
+            background-size: rem(40) rem(45);
+          }
+        }
+
+      }
+    }
+  }
+  div.list-hous{
+    padding: 0 rem(3);
+    @include height-set();
+    ul{
+      li{
+        @include height-set();
+        a{
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+          display: inline-block;
+          vertical-align: top;
+          img{
+            width: 100%;
+            vertical-align: top;
+          }
+        }
+
+        margin-top: rem(8);
+        background: #fff;
+        border: rem(1) solid #dadadb;
+        h3{
+          height:auto;
+          overflow: hidden;
+          @include font($f-yahei,14,24,#000);
+          text-indent: rem(2);
+          @include afont(#000);
+        }
+        p.l{
+          height: auto;
+          overflow: hidden;
+          @include font($f-yahei,12,18,#b3b3b3);
+          @include afont(#b3b3b3);
+          a{
+            height: auto;
+            overflow: hidden;
+            display: inline-block;
+            span.m{
+              font-size: rem(14);
+              color: #eb0101;
+            }
+            span{
+              padding: 0 rem(2);
+              display: inline-block;
+            }
+          }
+        }
+        div.y{
+          @include height-set();
+          padding-right:rem(12);
+          margin-top: rem(10);
+          a{
+            width: rem(58);
+            height: rem(22);
+            border: rem(1) solid #e1e1e1;;
+            border-radius: rem(2);
+            background: #fff;
+            display: inline-block;
+            @include font($f-yahei,12,22,#535353);
+            margin: 0 rem(4);
+            float: right;
+            text-align: center;
+            text-decoration: none;
+            &.a{
+              background: #f4511e;
+              border: rem(1) solid #f4511e;
+              color: #fff;
+            }
+          }
+        }
+        div.g{
+          height: rem(26);
+          overflow: hidden;
+          padding-right:rem(12);
+          margin-top: rem(10);
+          text-align: center;
+          a{
+            width: rem(58);
+            height: rem(22);
+            border: rem(1) solid #e1e1e1;;
+            border-radius: rem(2);
+            background: #fff;
+            display: inline-block;
+            @include font($f-yahei,12,22,#535353);
+            margin: 0 rem(3);
+            text-align: center;
+            text-decoration: none;
+          }
+        }
+        padding-bottom: rem(8);
+      }
+    }
+  }
+  div.details{
+    @include height-set();
+    div.banner{
+      height: rem(210);
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: rem(210);
+      }
+    }
+    div.box{
+      @include height-set();
+      h1{
+        @include height-set();
+        @include font($f-yahei,14,20,#222222);
+        @include afont(#222222);
+        text-align: center;
+        margin: rem(8) 0;
+      }
+      div.pro{
+        height:rem(22);
+        overflow: hidden;
+        @include font($f-yahei,12,22,#fff);
+        text-align: center;
+        span{
+          height: rem(22);
+          padding: 0 rem(5);
+          margin: 0 rem(2);
+          display: inline-block;
+          background: #ff3d00;
+        }
+      }
+      div.det{
+        margin: 0 rem(5);
+        @include height-set();
+        @include font($f-yahei,12,22,#606060);
+        @include afont(#606060);
+        h3{
+          height: rem(20);
+          overflow: hidden;
+          background: url("../images/fy-01.png") repeat-x;
+          background-size:auto rem(20);
+          text-align: center;
+          margin-top: rem(15);
+          span{
+            height: rem(18);
+            overflow: hidden;
+            border: rem(1) solid #8d8d8d;
+            background: #fff;
+            padding:0 rem(7);
+            border-radius: rem(2);
+            display: inline-block;
+            @include font($f-yahei,12,18,#3a3a3a);
+          }
+        }
+        div.m{
+          margin-top: rem(10);
+          @include height-set();
+          display:-webkit-box;
+          display:-moz-box;
+          display:-ms-box;
+          display:-o-box;
+          display:box;
+          div{
+            @include height-set();
+            -webkit-box-flex:1;
+            -moz-box-flex:1;
+            -ms-box-flex:1;
+            -o-box-flex:1;
+            box-flex:1;
+            ul{
+              li{
+                @include height-set();
+                @include font($f-yahei,12,24,#606060);
+                padding-left: rem(20);
+                &.w{
+                  padding-left: rem(50);
+                  background: url("../images/fy-02.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+                &.h{
+                  padding-left: rem(50);
+                  background: url("../images/fy-03.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+                &.wb{
+                  padding-left: rem(50);
+                  background: url("../images/fy-04.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+                &.b{
+                  padding-left: rem(50);
+                  background: url("../images/fy-05.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+                &.d{
+                  padding-left: rem(50);
+                  background: url("../images/fy-06.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+                &.t{
+                  padding-left: rem(50);
+                  background: url("../images/fy-07.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+                &.c{
+                  padding-left: rem(50);
+                  background: url("../images/fy-08.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+                &.dt{
+                  padding-left: rem(50);
+                  background: url("../images/fy-09.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+                &.s{
+                  padding-left: rem(50);
+                  background: url("../images/fy-10.png")no-repeat rem(20) center;
+                  background-size: contain;
+                }
+              }
+            }
+          }
+          &.i{
+            div{
+              ul{
+                li{
+                  line-height: rem(20);
+                  margin-top: rem(12);
+                }
+              }
+            }
+          }
+          ol{
+            list-style-type: decimal;
+            padding-left: rem(20);
+            li{
+              @include font($f-yahei,12,18,#3b3b3b);
+              @include afont(#3b3b3b);
+              margin-bottom: rem(3);
+            }
+          }
+        }
+      }
+    }
+  }
+  div.mc{
+    width: 100%;
+    height: rem(50);
+    overflow: hidden;
+    background: #fff;
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-box;
+    display:-o-box;
+    display:box;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: rem(1) solid #bbbbbb;
+    a{
+      -webkit-box-flex:1;
+      -moz-box-flex:1;
+      -ms-box-flex:1;
+      -o-box-flex:1;
+      box-flex:1;
+      display: block;
+      @include font($f-yahei,12,80,#bdbdbd);
+      text-decoration: none;
+      text-align: center;
+      &:nth-child(1){
+        background: url("../images/c_29.png") no-repeat center rem(5);
+        background-size: rem(21);
+        &.active{
+          background: url("../images/c_30.png") no-repeat center rem(5);
+          background-size: rem(21);
+          color: #f47146;
+        }
+      }
+      &:nth-child(2){
+        background: url("../images/c_35.png") no-repeat center rem(5);
+        background-size: rem(21);
+        &.active{
+          background: url("../images/c_34.png") no-repeat center rem(5);
+          background-size: rem(21);
+          color: #f47146;
+        }
+      }
+      &:nth-child(3){
+        background: url("../images/c_36.png") no-repeat center rem(5);
+        background-size: rem(21);
+        &.active{
+          background: url("../images/c_37.png") no-repeat center rem(5);
+          background-size: rem(21);
+          color: #f47146;
+        }
+      }
+      &:nth-child(4){
+        background: url("../images/c_32.png") no-repeat center rem(5);
+        background-size: rem(21);
+        &.active{
+          background: url("../images/c_33.png") no-repeat center rem(5);
+          background-size: rem(21);
+          color: #f47146;
+        }
+      }
+    }
+    &.detbottom{
+      height: rem(40);
+      border-top: 0;
+      a{
+        @include font($f-yahei,14,40,#fff);
+      }
+      a:nth-child(1){
+        background: #ffa726;
+      }
+      a:nth-child(2){
+        background: #f57105;
+      }
+      a:nth-child(3){
+        background: #ff5722;
+      }
+    }
+  }
+  div.search{
+    height: rem(44);
+    overflow: hidden;
+    background: #ff5722;
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-box;
+    display:-o-box;
+    display:box;
+    input{
+      height: rem(30);
+      margin-top: rem(7);
+      -webkit-box-flex:1;
+      -moz-box-flex:1;
+      -ms-box-flex:1;
+      -o-box-flex:1;
+      box-flex:1;
+      display: block;
+      border: rem(1) solid #bbbbbb;
+      background: #fff;
+      border-radius: rem(6);
+      margin-left: rem(10);
+    }
+    a{
+      height: rem(44);
+      overflow: hidden;
+      @include font($f-yahei,14,44,#fff);
+      text-decoration: none;
+      margin-left: rem(30);
+      margin-right: rem(20);
+    }
+  }
+  div.search-c{
+    @include height-set();
+    ul{
+      @include height-set();
+      border-top: rem(1) solid #bbbbbb;
+      li{
+        @include height-set();
+        h3{
+          height:rem(30);
+          overflow: hidden;
+          background: #e6e6e6;
+          @include font($f-yahei,14,30,#2f2f2f);
+          padding-left: rem(15);
+        }
+        div{
+          @include height-set();
+          margin-left: rem(5);
+          padding-bottom: rem(50);
+          a{
+            height: rem(30);
+            overflow: hidden;
+            display: inline-block;
+            border: rem(1) solid #bbbbbb;
+            padding: 0 rem(10);
+            text-decoration: none;
+            @include font($f-yahei,14,30,#2b2b2b);
+            margin-left: rem(10);
+            margin-top: rem(5);
+          }
+        }
+        p{
+          height: rem(36);
+          overflow: hidden;
+          @include font($f-yahei,14,36,#2b2b2b);
+          padding-left: rem(26);
+          @include afont(#2b2b2b);
+        }
+      }
+    }
+  }
+  div.makeForm{
+    width: 100%;
+    height: rem(290);
+    overflow: hidden;
+    border: rem(1) solid #bbbbbb;
+    border-radius: rem(4);
+    position: fixed;
+    left: 0;
+    bottom: rem(-250);
+    ul{
+      @include height-set();
+      li{
+        border-bottom: rem(1) solid #bbbbbb;
+        height: rem(54);
+        margin: 0 rem(6);
+        display:-webkit-box;
+        display:-moz-box;
+        display:-ms-box;
+        display:-o-box;
+        display:box;
+        padding-left: rem(14);
+        @include font($f-yahei,14,54,#101010);
+        input{
+          display: block;
+          height: rem(54);
+          border: 0;
+          background: none;
+          -webkit-box-flex:1;
+          -moz-box-flex:1;
+          -ms-box-flex:1;
+          -o-box-flex:1;
+          box-flex:1;
+        }
+        a.verCode{
+          height: rem(28);
+          overflow: hidden;
+          display: inline-block;
+          @include font($f-yahei,14,28,#333333);
+          text-decoration: none;
+          padding: 0 rem(10);
+          margin-top: rem(12);
+          vertical-align: top;
+          border-radius: rem(5);
+          border: rem(1) solid #bbbbbb;
+        }
+        a.x{
+          height: rem(54);
+          display: block;
+          -webkit-box-flex:1;
+          -moz-box-flex:1;
+          -ms-box-flex:1;
+          -o-box-flex:1;
+          box-flex:1;
+          text-align: center;
+          text-decoration: none;
+          color: #333333;
+        }
+        &.b{
+          padding-left: 0;
+          padding-top: rem(16);
+          a{
+            box-sizing: border-box;
+            width: calc(50% - 12px);
+            height: rem(28);
+            overflow: hidden;
+            display: block;
+            @include font($f-yahei,14,28,#333333);
+            text-decoration: none;
+            border-radius: rem(5);
+            text-align: center;
+            border: rem(1) solid #bbbbbb;
+            margin: 0 rem(6);
+          }
+        }
+        &:last-child{
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+  div.makeState{
+    width: calc(100% - 20px);
+    padding-top: rem(50);
+    padding-bottom: rem(12);
+    box-sizing: border-box;
+    border: rem(1) solid #bbbbbb;
+    position: fixed;
+    left: rem(10);
+    margin-top: rem(-38);
+    background: #fff;
+    display: none;
+    p{
+      @include height-set();
+      @include font($f-yahei,14,24,#171717);
+      text-align: center;
+      a{
+        color:#171717;
+      }
+      a.c{
+        width: rem(78);
+        height: rem(28);
+        overflow: hidden;
+        display: inline-block;
+        @include font($f-yahei,14,28,#171717);
+        margin-top: rem(15);
+        text-decoration: none;
+        text-align: center;
+        border: rem(1) solid #bbbbbb;
+        border-radius: rem(6);
+        vertical-align: top;
+      }
+    }
+  }
+}
+.mt10{
+  margin-top: rem(10);
+}
+.mt15{
+  margin-top: rem(15);
+}
+.pt15{
+  padding-top: rem(15);
+}
+.bor01{
+  border-top: rem(1) solid #bbbbbb;
+}
